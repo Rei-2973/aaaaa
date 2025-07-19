@@ -31,29 +31,27 @@
       position: absolute;
       width: 300%;
       height: 300%;
-      top: -100%;
-      left: -100%;
       background-image: radial-gradient(white 3px, transparent 4px);
       background-size: 60px 60px;
-      animation: starMove 180s linear infinite;
-      opacity: 0.6;
-      filter: brightness(140%) blur(1px);
+      animation: starMove 100s linear infinite;
+      opacity: 0.8;
+      filter: brightness(150%) blur(1px);
     }
 
     .stars-bg::after {
       background-image: radial-gradient(#aaccff 4px, transparent 5px);
       background-size: 90px 90px;
-      animation-duration: 250s;
-      opacity: 0.4;
-      filter: brightness(110%) blur(2px);
+      animation-duration: 160s;
+      opacity: 0.5;
+      filter: brightness(120%) blur(2px);
     }
 
     @keyframes starMove {
       0% {
-        transform: translate(0%, 0%);
+        transform: translate(0, 0);
       }
       100% {
-        transform: translate(33%, 33%);
+        transform: translate(-30%, -30%);
       }
     }
 
@@ -67,8 +65,10 @@
 
     .avatar {
       width: 120px;
+      height: 120px;
       border-radius: 50%;
       box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      object-fit: cover;
     }
 
     .name {
@@ -98,8 +98,10 @@
 
     .card-icon {
       width: 60px;
+      height: 60px;
       border-radius: 50%;
       margin-right: 10px;
+      object-fit: cover;
     }
 
     .card-info {
@@ -127,36 +129,40 @@
   <div class="stars-bg"></div>
 
   <div class="container">
-    <img src="avatar.jpg" class="avatar" alt="Avatar">
-    <h1 class="name">Rei</h1>
-    <p class="desc">Deploying decoy escape</p>
-    <p class="location">📍 ?</p>
+    <!-- ✅ アバター画像 -->
+    <img src="FE15D1E0-6E06-4FDB-8AF4-B8DD0841E833.jpeg" class="avatar" alt="Avatar">
 
+    <h1 class="name">DasS</h1>
+    <p class="desc">Deploying decoy escape</p>
+    <p class="location">📍 Croatia (Hrvatska)</p>
+    <!-- ✅ カードアイコン -->
     <div class="user-card">
       <img src="penguin.jpg" class="card-icon" alt="Icon">
       <div class="card-info">
         <strong>pixelpengi</strong><br>
-        sleepy
+        Buy Gold
       </div>
     </div>
 
+    <!-- ✅ ソーシャルリンク -->
     <div class="socials">
-  <!-- Roblox -->
-  <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
-    <img src="09E8C6B7-1F0B-4A21-A594-447902062B87.png" alt="Roblox">
-  </a>
+      <!-- Roblox -->
+      <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
+        <img src="09E8C6B7-1F0B-4A21-A594-447902062B87.png" alt="Roblox">
+      </a>
 
-  <!-- Spotify -->
-  <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
-    <img src="B856ACE5-123D-441D-8968-019C3D7638C8.png" alt="Spotify">
-  </a>
+      <!-- Spotify -->
+      <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
+        <img src="B856ACE5-123D-441D-8968-019C3D7638C8.png" alt="Spotify">
+      </a>
 
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
-    <img src="562BF37F-494C-440B-A1E9-305383155EA7.png" alt="TikTok">
-  </a>
-</div>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
+        <img src="562BF37F-494C-440B-A1E9-305383155EA7.png" alt="TikTok">
+      </a>
+    </div>
 
+    <!-- ✅ Spotify埋め込み -->
     <iframe 
       src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
       width="100%" 
