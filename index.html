@@ -31,27 +31,29 @@
       position: absolute;
       width: 300%;
       height: 300%;
+      top: -100%;
+      left: -100%;
       background-image: radial-gradient(white 3px, transparent 4px);
       background-size: 60px 60px;
-      animation: starMove 100s linear infinite;
-      opacity: 0.8;
-      filter: brightness(150%) blur(1px);
+      animation: starMove 180s linear infinite;
+      opacity: 0.6;
+      filter: brightness(140%) blur(1px);
     }
 
     .stars-bg::after {
       background-image: radial-gradient(#aaccff 4px, transparent 5px);
       background-size: 90px 90px;
-      animation-duration: 160s;
-      opacity: 0.5;
-      filter: brightness(120%) blur(2px);
+      animation-duration: 250s;
+      opacity: 0.4;
+      filter: brightness(110%) blur(2px);
     }
 
     @keyframes starMove {
       0% {
-        transform: translate(0, 0);
+        transform: translate(0%, 0%);
       }
       100% {
-        transform: translate(-30%, -30%);
+        transform: translate(33%, 33%);
       }
     }
 
