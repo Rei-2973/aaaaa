@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- モバイル対応 -->
   <title>Rei | Profile</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
@@ -13,7 +14,7 @@
       background: linear-gradient(to bottom, #0a0f2c, #000000 80%);
       color: rgba(255, 255, 255, 0.9);
       font-family: 'Outfit', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     .stars-bg {
@@ -56,11 +57,13 @@
     }
 
     .container {
-      padding: 40px;
+      padding: 30px 20px;
       text-align: center;
       position: relative;
       z-index: 1;
       backdrop-filter: blur(2px);
+      max-width: 600px;
+      margin: auto;
     }
 
     .avatar {
@@ -72,19 +75,19 @@
     }
 
     .name {
-      font-size: 36px;
+      font-size: 6vw;
       margin-top: 15px;
       color: #ffffff;
     }
 
     .desc {
-      font-size: 18px;
+      font-size: 4.5vw;
       color: #ccccff;
       margin-bottom: 5px;
     }
 
     .location {
-      font-size: 14px;
+      font-size: 4vw;
       color: #aaaaff;
       margin-bottom: 30px;
     }
@@ -94,22 +97,29 @@
       align-items: center;
       justify-content: center;
       margin-bottom: 20px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .card-icon {
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      margin-right: 10px;
       object-fit: cover;
     }
 
     .card-info {
       text-align: left;
+      font-size: 4vw;
+    }
+
+    .socials {
+      margin-top: 20px;
     }
 
     .socials img {
-      width: 36px;
+      width: 40px;
+      height: 40px;
       margin: 0 10px;
       transition: transform 0.2s ease;
     }
@@ -122,6 +132,13 @@
       margin-top: 30px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+      width: 100%;
+    }
+
+    @media (min-width: 600px) {
+      .name { font-size: 36px; }
+      .desc { font-size: 20px; }
+      .location, .card-info { font-size: 16px; }
     }
   </style>
 </head>
@@ -129,43 +146,33 @@
   <div class="stars-bg"></div>
 
   <div class="container">
-    <!-- ✅ アバター画像 -->
     <img src="FE15D1E0-6E06-4FDB-8AF4-B8DD0841E833.jpeg" class="avatar" alt="Avatar">
 
-    <h1 class="name">Rei</h1>
+    <h1 class="name">DasS</h1>
     <p class="desc">Deploying decoy escape</p>
-    <p class="location">📍 ?</p>
-    <!-- ✅ カードアイコン -->
-    <div class="user-card">
+    <p class="location">📍 Croatia (Hrvatska)</p>
+<div class="user-card">
       <img src="penguin.jpg" class="card-icon" alt="Icon">
       <div class="card-info">
         <strong>pixelpengi</strong><br>
-        sleppy
+        Buy Gold
       </div>
     </div>
 
-    <!-- ✅ ソーシャルリンク -->
     <div class="socials">
-      <!-- Roblox -->
       <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
         <img src="09E8C6B7-1F0B-4A21-A594-447902062B87.png" alt="Roblox">
       </a>
-
-      <!-- Spotify -->
       <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
         <img src="B856ACE5-123D-441D-8968-019C3D7638C8.png" alt="Spotify">
       </a>
-
-      <!-- TikTok -->
       <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
         <img src="562BF37F-494C-440B-A1E9-305383155EA7.png" alt="TikTok">
       </a>
     </div>
 
-    <!-- ✅ Spotify埋め込み -->
     <iframe 
       src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
-      width="100%" 
       height="152" 
       frameborder="0" 
       allowfullscreen="" 
