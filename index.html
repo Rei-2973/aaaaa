@@ -7,15 +7,35 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: linear-gradient(to bottom, #0a0f2c, #000000 80%);
-      color: rgba(255, 255, 255, 0.9);
-      font-family: 'Outfit', sans-serif;
-      overflow-x: hidden;
-    }
+   html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #000c2b 0%, #000000 100%);
+  font-family: 'Outfit', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.stars-bg::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(rgba(170, 210, 255, 0.4) 2px, transparent 3px);
+  background-size: 100px 100px;
+  animation: starFloat 60s linear infinite;
+  z-index: -2;
+  opacity: 0.6;
+}
+
+@keyframes starFloat {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-20%, -20%); }
+}
 
    <div class="big-stars-bg"></div>
   position: fixed;
