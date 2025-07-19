@@ -17,35 +17,28 @@
       overflow-x: hidden;
     }
 
-    .stars-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
+   <div class="big-stars-bg"></div>
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  z-index: -1;
+  background-image: radial-gradient(rgba(170, 210, 255, 0.5) 6px, transparent 7px);
+  background-size: 100px 100px;
+  animation: moveBigStars 80s linear infinite;
+  opacity: 0.4;
+  filter: blur(2px);
+}
 
-    .stars-bg::before,
-    .stars-bg::after {
-      content: "";
-      position: absolute;
-      width: 300%;
-      height: 300%;
-      background-image: radial-gradient(white 3px, transparent 4px);
-      background-size: 60px 60px;
-      animation: starMove 100s linear infinite;
-      opacity: 0.8;
-      filter: brightness(150%) blur(1px);
-    }
-
-    .stars-bg::after {
-      background-image: radial-gradient(#aaccff 4px, transparent 5px);
-      background-size: 90px 90px;
-      animation-duration: 160s;
-      opacity: 0.5;
-      filter: brightness(120%) blur(2px);
-    }
+@keyframes moveBigStars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}
 
     @keyframes starMove {
       0% {
