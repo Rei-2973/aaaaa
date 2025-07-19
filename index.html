@@ -4,45 +4,44 @@
   <meta charset="UTF-8">
   <title>guns.lol風ページ</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      overflow: hidden;
+      padding: 0;
+      height: 100%;
       background: black;
       color: white;
       font-family: Arial, sans-serif;
-      text-align: center;
+      overflow: hidden;
     }
 
-    /* ⭐ 大きくて明るい星粒の背景 */
+    /* 🌌 星背景アニメーション */
     .stars-bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       z-index: -1;
-      pointer-events: none;
+      overflow: hidden;
     }
 
     .stars-bg::before,
     .stars-bg::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
       width: 200%;
       height: 200%;
       background-image: radial-gradient(white 2px, transparent 2px);
-      background-size: 30px 30px;
+      background-size: 40px 40px;
       animation: starMove 150s linear infinite;
-      opacity: 0.7;
+      opacity: 0.6;
     }
 
     .stars-bg::after {
       background-image: radial-gradient(white 3px, transparent 3px);
-      background-size: 50px 50px;
-      opacity: 0.4;
+      background-size: 60px 60px;
       animation-duration: 220s;
+      opacity: 0.4;
     }
 
     @keyframes starMove {
@@ -54,9 +53,9 @@
       }
     }
 
-    /* コンテンツ部分 */
     .container {
-      padding: 30px;
+      padding: 40px;
+      text-align: center;
       position: relative;
       z-index: 1;
     }
@@ -73,12 +72,11 @@
 
     .desc {
       font-size: 16px;
-      margin-bottom: 10px;
     }
 
     .location {
       font-size: 14px;
-      margin-bottom: 20px;
+      margin: 8px 0 20px;
     }
 
     .user-card {
@@ -101,6 +99,7 @@
 
     iframe {
       margin-top: 20px;
+      border-radius: 12px;
     }
   </style>
 </head>
@@ -122,31 +121,26 @@
     </div>
 
     <div class="socials">
-      <!-- Roblox -->
       <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
         <img src="roblox-icon.png" alt="Roblox">
       </a>
-
-      <!-- Spotify -->
       <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
         <img src="spotify-icon.png" alt="Spotify">
       </a>
-
-      <!-- TikTok -->
       <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
         <img src="tiktok-icon.png" alt="TikTok">
       </a>
     </div>
 
-    <!-- Spotify Embed Player -->
-    <iframe style="border-radius:12px" 
-        src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
-        width="100%" 
-        height="152" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-        loading="lazy">
+    <!-- Spotify Player -->
+    <iframe 
+      src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
+      width="100%" 
+      height="152" 
+      frameborder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
     </iframe>
   </div>
 </body>
