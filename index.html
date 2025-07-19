@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>guns.lol風ページ</title>
+  <title>DasS | Profile</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0a0f2c, #000000 80%);
+      color: rgba(255, 255, 255, 0.9);
+      font-family: 'Outfit', sans-serif;
       overflow: hidden;
     }
 
-    /* 🌌 星背景アニメーション */
     .stars-bg {
       position: fixed;
       top: 0;
@@ -22,7 +23,6 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      overflow: hidden;
     }
 
     .stars-bg::before,
@@ -31,17 +31,19 @@
       position: absolute;
       width: 200%;
       height: 200%;
-      background-image: radial-gradient(white 2px, transparent 2px);
-      background-size: 40px 40px;
-      animation: starMove 150s linear infinite;
-      opacity: 0.6;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+      background-size: 50px 50px;
+      animation: starMove 120s linear infinite;
+      opacity: 0.4;
+      filter: blur(1px);
     }
 
     .stars-bg::after {
-      background-image: radial-gradient(white 3px, transparent 3px);
-      background-size: 60px 60px;
-      animation-duration: 220s;
-      opacity: 0.4;
+      background-image: radial-gradient(rgba(180, 220, 255, 0.7) 3px, transparent 3px);
+      background-size: 80px 80px;
+      animation-duration: 200s;
+      opacity: 0.2;
+      filter: blur(2px);
     }
 
     @keyframes starMove {
@@ -58,25 +60,31 @@
       text-align: center;
       position: relative;
       z-index: 1;
+      backdrop-filter: blur(2px);
     }
 
     .avatar {
       width: 120px;
       border-radius: 50%;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
     }
 
     .name {
-      font-size: 32px;
-      margin-top: 10px;
+      font-size: 36px;
+      margin-top: 15px;
+      color: #ffffff;
     }
 
     .desc {
-      font-size: 16px;
+      font-size: 18px;
+      color: #ccccff;
+      margin-bottom: 5px;
     }
 
     .location {
       font-size: 14px;
-      margin: 8px 0 20px;
+      color: #aaaaff;
+      margin-bottom: 30px;
     }
 
     .user-card {
@@ -92,14 +100,24 @@
       margin-right: 10px;
     }
 
+    .card-info {
+      text-align: left;
+    }
+
     .socials img {
-      width: 40px;
+      width: 36px;
       margin: 0 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .socials img:hover {
+      transform: scale(1.15);
     }
 
     iframe {
-      margin-top: 20px;
+      margin-top: 30px;
       border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
     }
   </style>
 </head>
@@ -109,7 +127,7 @@
   <div class="container">
     <img src="avatar.jpg" class="avatar" alt="Avatar">
     <h1 class="name">DasS</h1>
-    <p class="desc">Experienced Server Manager/Administrator/Moderator (4 Years)</p>
+    <p class="desc">Experienced Server Manager / Administrator / Moderator (4 Years)</p>
     <p class="location">📍 Croatia (Hrvatska)</p>
 
     <div class="user-card">
@@ -132,7 +150,6 @@
       </a>
     </div>
 
-    <!-- Spotify Player -->
     <iframe 
       src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
       width="100%" 
