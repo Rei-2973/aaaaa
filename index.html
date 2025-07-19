@@ -4,18 +4,71 @@
   <meta charset="UTF-8">
   <title>guns.lol風ページ</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .stars-bg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 20px 20px;
+      z-index: -1;
+    }
+    .container {
+      padding: 30px;
+    }
+    .avatar {
+      width: 120px;
+      border-radius: 50%;
+    }
+    .name {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+    .desc {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .location {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .user-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .card-icon {
+      width: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .socials img {
+      width: 40px;
+      margin: 0 10px;
+    }
+    audio {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="stars-bg"></div>
 
   <div class="container">
-    <img src="avatar.jpg" class="avatar">
+    <img src="avatar.jpg" class="avatar" alt="Avatar">
     <h1 class="name">DasS</h1>
     <p class="desc">Experienced Server Manager/Administrator/Moderator (4 Years)</p>
     <p class="location">📍 Croatia (Hrvatska)</p>
 
     <div class="user-card">
-      <img src="penguin.jpg" class="card-icon">
+      <img src="penguin.jpg" class="card-icon" alt="Icon">
       <div class="card-info">
         <strong>pixelpengi</strong><br>
         Buy Gold
@@ -23,21 +76,21 @@
     </div>
 
     <div class="socials">
-  <!-- Roblox -->
-  <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
-    <img src="roblox-icon.png" alt="Roblox">
-  </a>
+      <!-- Roblox -->
+      <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
+        <img src="roblox-icon.png" alt="Roblox">
+      </a>
 
-  <!-- Spotify -->
-  <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
-    <img src="spotify-icon.png" alt="Spotify">
-  </a>
+      <!-- Spotify -->
+      <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
+        <img src="spotify-icon.png" alt="Spotify">
+      </a>
 
-  <!-- TikTok -->
-  <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
-    <img src="tiktok-icon.png" alt="TikTok">
-  </a>
-</div>
+      <!-- TikTok -->
+      <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
+        <img src="tiktok-icon.png" alt="TikTok">
+      </a>
+    </div>
 
     <audio controls>
       <source src="insomnia.mp3" type="audio/mp3">
