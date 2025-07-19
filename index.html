@@ -2,71 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- モバイル対応 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rei | Profile</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
 
-   html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background: linear-gradient(180deg, #000c2b 0%, #000000 100%);
-  font-family: 'Outfit', sans-serif;
-  color: rgba(255, 255, 255, 0.9);
-  overflow-x: hidden;
-  position: relative;
-}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+      color: rgba(255, 255, 255, 0.9);
+      overflow-x: hidden;
+      position: relative;
+      background: radial-gradient(circle at 50% 0%, #1c1b33 0%, #000014 40%, #000 100%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
-.stars-bg::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(rgba(170, 210, 255, 0.4) 2px, transparent 3px);
-  background-size: 100px 100px;
-  animation: starFloat 60s linear infinite;
-  z-index: -2;
-  opacity: 0.6;
-}
+    .stars-bg::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(rgba(140, 200, 255, 0.4) 1.5px, transparent 2px);
+      background-size: 100px 100px;
+      animation: starFloat 90s linear infinite;
+      z-index: -2;
+      opacity: 0.4;
+      filter: blur(1px);
+    }
 
-@keyframes starFloat {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(-20%, -20%); }
-}
+    .stars-bg::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 150%;
+      height: 150%;
+      background: linear-gradient(45deg, rgba(0,255,255,0.05), rgba(255,255,255,0.05));
+      animation: glowFlow 40s linear infinite;
+      z-index: -3;
+      pointer-events: none;
+    }
 
-   <div class="big-stars-bg"></div>
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 300%;
-  height: 300%;
-  z-index: -1;
-  background-image: radial-gradient(rgba(170, 210, 255, 0.5) 6px, transparent 7px);
-  background-size: 100px 100px;
-  animation: moveBigStars 80s linear infinite;
-  opacity: 0.4;
-  filter: blur(2px);
-}
+    @keyframes starFloat {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-25%, -25%); }
+    }
 
-@keyframes moveBigStars {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-20%, -20%);
-  }
-}
-
-    @keyframes starMove {
-      0% {
-        transform: translate(0, 0);
-      }
-      100% {
-        transform: translate(-30%, -30%);
-      }
+    @keyframes glowFlow {
+      0% { transform: rotate(0deg) translate(0, 0); }
+      100% { transform: rotate(360deg) translate(0, 0); }
     }
 
     .container {
@@ -87,26 +77,25 @@
       object-fit: cover;
     }
 
-  .name {
-  font-size: 6vw;
-  margin-top: 15px;
-  color: #cfffff;
-  text-shadow: 0 0 6px #aafaff, 0 0 12px #6fffff;
-}
+    .name, .desc, .location, .card-info {
+      color: #aeeeff;
+      text-shadow: 0 0 6px #7fffd4, 0 0 12px #1e90ff;
+    }
 
-.desc {
-  font-size: 4.5vw;
-  color: #aafaff;
-  text-shadow: 0 0 4px #88ffff;
-  margin-bottom: 5px;
-}
+    .name {
+      font-size: 6vw;
+      margin-top: 15px;
+    }
 
-.location {
-  font-size: 4vw;
-  color: #aafaff;
-  text-shadow: 0 0 4px #66ffff;
-  margin-bottom: 30px;
-}
+    .desc {
+      font-size: 4.5vw;
+      margin-bottom: 5px;
+    }
+
+    .location {
+      font-size: 4vw;
+      margin-bottom: 30px;
+    }
 
     .user-card {
       display: flex;
@@ -117,20 +106,11 @@
       flex-wrap: wrap;
     }
 
-    .card-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      object-fit: cover;
+    .card-info {
+      text-align: center;
+      font-size: 4vw;
+      font-weight: bold;
     }
-
-
-.card-info {
-  text-align: left;
-  font-size: 4vw;
-  color: #cfffff;
-  text-shadow: 0 0 4px #99ffff;
-}
 
     .socials {
       margin-top: 20px;
@@ -170,33 +150,30 @@
     <h1 class="name">Rei</h1>
     <p class="desc">hello 6/25 ENFP</p>
     <p class="location">📍 Japan</p>
-<div class="user-card">
-      <div class="card-info">
-        <strong>My link</strong><br>
-        
-      </div>
-    </div>
 
+    <div class="user-card">
+      <div class="card-info">My link</div>
+    </div>
     <div class="socials">
       <a href="https://www.roblox.com/share?code=79d394580f3e6046b9e76a8156b38e4f&type=Profile&source=ProfileShare&stamp=1752902000587" target="_blank">
-        <img src=IMG_5805.png
+        <img src="IMG_5805.png">
       </a>
       <a href="https://open.spotify.com/user/317bwulsz633xbnjpeyedrbbs73a?si=2JMLkMq1Qrau2A6gQBkO4A" target="_blank">
-        <img src=OIP.webp
+        <img src="OIP.webp">
       </a>
       <a href="https://www.tiktok.com/@tds7352?_t=ZS-8y9K4hQ5JF2&_r=1" target="_blank">
-  <img src=IMG_5807.png
-</a>
+        <img src="IMG_5807.png">
       </a>
     </div>
 
     <iframe 
-  src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator&autoplay=1" 
-  height="152" 
-  frameborder="0" 
-  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-  loading="lazy">
-</iframe>
+      src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
+      height="152" 
+      frameborder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
   </div>
 </body>
 </html>
