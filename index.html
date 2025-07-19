@@ -3,19 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <title>guns.lol風ページ</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* 背景アニメーション */
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .stars-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .stars-bg::before,
+    .stars-bg::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background-image: radial-gradient(white 1px, transparent 1px);
+      background-size: 2px 2px;
+      animation: starMove 200s linear infinite;
+      opacity: 0.5;
+    }
+
+    .stars-bg::after {
+      background-size: 3px 3px;
+      opacity: 0.3;
+      animation-duration: 300s;
+    }
+
+    @keyframes starMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    /* コンテンツデザイン */
+    .container {
+      padding: 30px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .avatar {
+      width: 120px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+
+    .desc {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .location {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .user-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .card-icon {
+      width: 60px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .socials img {
+      width: 40px;
+      margin: 0 10px;
+    }
+
+    iframe {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="stars-bg"></div>
 
   <div class="container">
-    <img src="avatar.jpg" class="avatar">
+    <img src="avatar.jpg" class="avatar" alt="Avatar">
     <h1 class="name">DasS</h1>
     <p class="desc">Experienced Server Manager/Administrator/Moderator (4 Years)</p>
     <p class="location">📍 Croatia (Hrvatska)</p>
 
     <div class="user-card">
-      <img src="penguin.jpg" class="card-icon">
+      <img src="penguin.jpg" class="card-icon" alt="Icon">
       <div class="card-info">
         <strong>pixelpengi</strong><br>
         Buy Gold
@@ -49,7 +147,6 @@
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy">
     </iframe>
-    
   </div>
 </body>
 </html>
