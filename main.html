@@ -165,10 +165,22 @@
       </a>
     </div>
 
-    <iframe 
-      <audio id="bgm" autoplay loop>
-  <source src="You_Were_the_Last_Light.mp3" type="audio/mpeg">
+    <audio id="bgm" autoplay loop>
+  <source src="https://rei-2973.github.io/You_Were_the_Last_Light.mp3" type="audio/mpeg">
+  お使いのブラウザは audio タグに対応していません。
 </audio>
+
+<script>
+  // スマホで音を出すために、初回タップで再生
+  document.addEventListener('touchstart', function () {
+    const bgm = document.getElementById('bgm');
+    if (bgm.paused) {
+      bgm.play().catch(function(e) {
+        console.log('再生できませんでした:', e);
+      });
+    }
+  }, { once: true });
+</script>
 
 <script>
   // スマホで音を出すために、初回タップで再生
