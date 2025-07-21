@@ -126,13 +126,6 @@
       transform: scale(1.15);
     }
 
-    iframe {
-      margin-top: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-      width: 100%;
-    }
-
     @media (min-width: 600px) {
       .name { font-size: 36px; }
       .desc { font-size: 20px; }
@@ -164,20 +157,21 @@
         <img src="IMG_5807.png" alt="TikTok">
       </a>
     </div>
+  </div>
 
-     </div>
-
+  <!-- BGM オーディオ -->
   <audio id="bgm" autoplay loop>
     <source src="https://rei-2973.github.io/You_Were_the_Last_Light.mp3" type="audio/mpeg">
     お使いのブラウザは audio タグに対応していません。
   </audio>
 
   <script>
+    // スマホで音を出すための最初のタップ対策
     document.addEventListener('touchstart', function () {
       const bgm = document.getElementById('bgm');
       if (bgm.paused) {
         bgm.play().catch(function(e) {
-          console.log('再生できませんでした:', e);
+          console.log('再生エラー:', e);
         });
       }
     }, { once: true });
