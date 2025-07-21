@@ -166,12 +166,16 @@
     </div>
 
     <iframe 
-      src="https://open.spotify.com/embed/track/6s2TBrbs9bTC1faiyww2AN?utm_source=generator" 
-      height="152" 
-      frameborder="0" 
-      allowfullscreen="" 
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy">
+      <audio id="bgm" autoplay loop>
+  <source src="You_Were_the_Last_Light.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // スマホで音を出すために、初回タップで再生
+  document.addEventListener('touchstart', function () {
+    document.getElementById('bgm').play();
+  }, { once: true });
+</script>
     </iframe>
   </div>
 </body>
