@@ -159,22 +159,20 @@
     </div>
   </div>
 
-  <!-- BGM オーディオ -->
-  <audio id="bgm" autoplay loop>
-    <source src="https://rei-2973.github.io/You_Were_the_Last_Light.mp3" type="audio/mpeg">
-    お使いのブラウザは audio タグに対応していません。
-  </audio>
+      </div> <!-- container終了 -->
 
-  <script>
-    // スマホで音を出すための最初のタップ対策
-    document.addEventListener('touchstart', function () {
-      const bgm = document.getElementById('bgm');
-      if (bgm.paused) {
-        bgm.play().catch(function(e) {
-          console.log('再生エラー:', e);
-        });
-      }
-    }, { once: true });
-  </script>
-</body>
-</html>
+    <!-- 🎧 Spotify埋め込み -->
+    <iframe style="border-radius:12px" 
+      src="https://open.spotify.com/embed/track/1xK1mKjl8vgr3a6z1ybMyi?utm_source=generator" 
+      width="100%" 
+      height="152" 
+      frameBorder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+
+    <!-- BGM オーディオ -->
+    <audio id="bgm" autoplay loop>
+      <source src="https://rei-2973.github.io/You_Were_the_Last_Light.mp3" type="audio/mpeg">
+    </audio>
